@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/coursnav.css">
+    <link rel="stylesheet" href="../CSS/courscomponent.css">
+    <link rel="stylesheet" href="../CSS/responsivefornew.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pho/webb logo.png">
+            <span>webb orbit</span>
+        </div>
+        <div class="links">
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../CHTML/homehtml.html">html</a>
+                <a href="../CCSS/home-css.html">css</a>
+                <a href="#">javascript</a>
+                <a href="#">react js</a>
+                <button>dark</button>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div id="sidenav"></div>
+        <div id="maincon">
+            <h1 class="mainh1">CSS Positioning: Real-World Examples and Best Practices</h1>
+            <p class="para m3top">
+                In CSS, the <span class="highlight">position</span> property is used to specify the positioning method of an element within its containing element. It determines how the element should be placed on the page and how it interacts with other elements.</p>
+                <p class="para">The <span class="highlight">position</span> property in CSS can take several values, each defining a different positioning behavior for an element. Here are the values:</p>
+                <div class="listbox">
+                    <ol>
+                        <li><span class="listpointer">static</span></li>
+                        <li><span class="listpointer">relative</span></li>
+                        <li><span class="listpointer">absolute</span></li>
+                        <li><span class="listpointer">fixed</span></li>
+                        <li><span class="listpointer">sticky</span></li>
+                    </ol>
+                </div>
+
+                <h2 class="mainh2">static</h2>
+                <p class="para">This is the default value. Elements with <span class="highlight">position: static;</span> are positioned according to the normal flow of the document. The top, right, bottom, and left properties have no effect when position is set to static.</p>
+
+                <div class="csseditor">
+                    <div class="writecode">
+                        <textarea  class="codearea" spellcheck="false" name="csseditor">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nam hic ullam dolorum sapiente ex necessitatibus natus repellat perspiciatis assumenda?</p>
+
+<div class="static-box">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quaerat!</p>
+</div>
+                        </textarea>
+                        <textarea  class="codearea" spellcheck="false" name="csseditor">
+.static-box {
+position: static;
+
+padding: 5px;
+background-color: lightblue;
+}                            
+                        </textarea>
+                    </div>
+                    <div class="showcode">
+                        <iframe class="codeoutput" frameborder="0"></iframe>
+                    </div>
+                </div>
+<p class="para">In this example, the <span class="highlight">.static-box</span> div will be positioned statically by default. It will follow the normal flow of the document, stacking elements as they appear in the HTML.</p>
+
+<h2 class="mainh2">relative</h2>
+<p class="para">Elements with <span class="highlight">position: relative;</span> are positioned relative to their normal position in the document flow. You can then use the top, right, bottom, and left properties to adjust the element's position.</p>
+<div class="csseditor">
+    <div class="writecode">
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nam hic ullam dolorum sapiente ex necessitatibus natus repellat perspiciatis assumenda?</p>
+
+<div class="relative-box">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quaerat!</p>
+</div>
+        </textarea>
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+.relative-box {
+position: relative;
+top: 10px;
+left: 50px;
+
+width: 50%;
+padding: 5px;
+background-color: lightblue;
+}                                       
+        </textarea>
+    </div>
+    <div class="showcode">
+        <iframe class="codeoutput" frameborder="0"></iframe>
+    </div>
+</div>
+<p class="para">In this example, the <span class="highlight">.relative-box</span> div is given a <span class="highlight">position: relative;</span>, which means it will be positioned relative to its normal position in the document flow. The <span class="highlight">top: 10px;</span> and <span class="highlight">left: 50px;</span> properties then offset the element 10 pixels down and 50 pixels to the right from its normal position.</p>
+
+<h2 class="mainh2">absolute</h2>
+<p class="para">Elements with <span class="highlight">position: absolute;</span> are removed from the normal document flow and positioned relative to the nearest positioned ancestor (or the initial containing block if there is none). If there is no positioned ancestor, it is positioned relative to the initial containing block.</p>
+
+<div class="csseditor">
+    <div class="writecode">
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nam hic ullam dolorum sapiente ex necessitatibus natus repellat perspiciatis assumenda?</p>
+<div class="container">
+    
+    <div class="absolute-box">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quaerat!</p>
+    </div>
+
+</div>
+        </textarea>
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+.container {
+position: relative;
+}
+
+.absolute-box {
+position: absolute;
+top: 30px;
+right: 10px;
+
+width: 50%;
+padding: 5px;
+background-color: lightblue;
+}                                       
+        </textarea>
+    </div>
+    <div class="showcode">
+        <iframe class="codeoutput" frameborder="0"></iframe>
+    </div>
+</div>
+<p class="para">The <span class="highlight">.container</span> div is given <span class="highlight">position: relative;</span>, creating a positioned ancestor for the <span class="highlight">.absolute-box</span>.</p>
+<p class="para">The <span class="highlight">.absolute-box</span> div is given <span class="highlight">position: absolute;</span>, and its position is then defined using the top and left properties. These values are relative to its nearest positioned ancestor, in this case, the <span class="highlight">.container</span>.</p>
+<p class="para">You can adjust the top, right, bottom, and left values to control the exact positioning of the absolutely positioned element.</p>
+
+<h2 class="mainh2">fixed</h2>
+<p class="para">Elements with <span class="highlight">position: fixed;</span> are removed from the normal document flow and are positioned relative to the browser window. They will stay fixed even if the page is scrolled.</p>
+<div class="csseditor">
+    <div class="writecode">
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+<div class="fixed-box">I AM NAVBAR</div>    
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+        </textarea>
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+.fixed-box{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+
+padding: 5px;
+background-color: lightblue;
+}            
+        </textarea>
+    </div>
+    <div class="showcode">
+        <iframe class="codeoutput" frameborder="0"></iframe>
+    </div>
+</div>
+<p class="para">In this example, the <span class="highlight">.fixed-box</span> div is given <span class="highlight">position: fixed;</span>, and its position is then defined using the top, right and left properties. The box will stay fixed at 0 pixels from the top and 0 pixels from left and right of the viewport, regardless of scrolling.
+</p>
+<p class="para">Keep in mind that fixed positioning can cause overlap with other elements on the page, so you might need to manage the layout accordingly.</p>
+
+<h2 class="mainh2">sticky</h2>
+<p class="para">Elements with <span class="highlight">position: sticky;</span> are a hybrid of relative and fixed positioning. 
+    When you use <span class="highlight">position: sticky;</span> in CSS, you're telling the browser to switch between relative and fixed positioning based on the user's scroll position. An element with <span class="highlight">position: sticky;</span> is treated as relative positioned within its containing block until it crosses a specified point during scrolling, at which point it becomes fixed positioned. Here's an example:</p>
+
+<div class="csseditor">
+    <div class="writecode">
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>
+
+<div class="container">
+<div class="sticky-box">I AM sticky</div>    
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+ </div>
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>     
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste! Reprehenderit recusandae aliquam blanditiis veritatis voluptatibus alias cumque vitae, doloremque, asperiores autem similique deleniti maiores animi quos quod vel quia?</p>
+        </textarea>
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+.container{
+hight: 150px; 
+}   
+
+.sticky-box{
+position: sticky;
+top: 150px;
+left: 0;
+right: 0;
+
+padding: 5px;
+background-color: lightblue;
+}            
+        </textarea>
+    </div>
+    <div class="showcode">
+        <iframe class="codeoutput" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="listbox">
+    <ol>
+        <li>The <span class="highlight">.container</span> div is given a height to create a scrollable area.</li>
+        <li>The <span class="highlight">.sticky-box</span> div is given <span class="highlight">position: sticky;</span> and a top value. This means the box will be relative positioned until the user scrolls down 20 pixels from the top of the <span class="highlight">.container</span>, at which point it becomes fixed positioned and sticks to the top.</li>
+    </ol>
+</div>
+<p class="para">You can adjust the top value to control the point at which the element becomes sticky. This is a powerful feature for creating sticky headers, navigation bars, or other elements that you want to stay visible while the user scrolls through content. Note that browser support for position: sticky is generally good, but there may be some differences in behavior across browsers.</p>
+
+
+
+<p class="para">Understanding these position values is crucial for creating complex layouts and achieving specific design goals on a webpage.</p>
+
+<h2 class="mainh2">best practices using positions</h2>
+<p class="para">
+    When using the position property in CSS, it's important to follow best practices to ensure a well-structured and maintainable layout. </p>
+    <div class="listbox">
+        <ul>
+            <li><span class="listpointer">Understand the Position Values: </span>Have a clear understanding of the different position values (static, relative, absolute, fixed, and sticky) and their implications. Each value serves a specific purpose, so use them appropriately based on your layout requirements.</li>
+            <li><span class="listpointer">Use position: relative; for Context: </span>When you need to position an element relative to its normal position, use position: relative;. This is often useful for creating relatively positioned child elements within a container.</li>
+            <li><span class="listpointer">Avoid Global Positioning: </span>Avoid using global positioning with position: absolute; or position: fixed; without a containing element. It can lead to unexpected behavior, and it's often better to have a structured layout with proper containers.</li>
+            <li><span class="listpointer">Combine position with Other Properties: </span>Combine the position property with other layout and box model properties like top, right, bottom, left, margin, and z-index to achieve the desired positioning and spacing.</li>
+            <li><span class="listpointer">Avoid Overusing position: fixed;:  </span>Be cautious with fixed positioning, especially for elements that may cover important content on the page. It's commonly used for headers or navigation bars but can be disruptive if misused.</li>
+        </ul>
+    </div>
+    <p class="para">By following these best practices, you can create more maintainable and predictable layouts in your web projects. Always test your layouts across different browsers to ensure consistent behavior.</p>
+</div>
+    </main>
+</body>
+<script src="../JS/cCSS.js"></script>
+</html>

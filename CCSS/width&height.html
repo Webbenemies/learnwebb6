@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/coursnav.css">
+    <link rel="stylesheet" href="../CSS/courscomponent.css">
+    <link rel="stylesheet" href="../CSS/responsivefornew.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pho/webb logo.png">
+            <span>webb orbit</span>
+        </div>
+        <div class="links">
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../CHTML/homehtml.html">html</a>
+                <a href="../CCSS/home-css.html">css</a>
+                <a href="#">javascript</a>
+                <a href="#">react js</a>
+                <button>dark</button>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div id="sidenav"></div>
+        <div id="maincon">
+            <h1 class="mainh1">Exploring Width and Height Properties</h1>
+            <p class="para"> you can set the width and height of elements using the width and height properties, respectively. These properties allow you to control the size of various HTML elements on your web page. </p>
+
+            <h2 class="mainh2">Setting Width and Height</h2>
+            <div class="listbox">
+                <ul>
+                    <li><span class="listpionter">Fixed Width and Height: </span>
+                    </li>
+                    <div class="syntax">
+                        <pre>
+                            .example {
+                                width: 200px; /* Set a fixed width */
+                                height: 100px; /* Set a fixed height */
+                              }
+                        </pre>
+                    </div>
+                    <li><span class="listpionter">Percentage Width and height: </span></li>
+                    <div class="syntax">
+                        <pre>
+                            .example {
+                                width: 50%; /* Set width as a percentage of the parent container */
+                                height: 50%;
+                              }                              
+                        </pre>
+                    </div>
+                    <li><span class="listpionter">Max and Min Width: </span></li>
+                    <div class="syntax">
+                        <pre>
+                            .example {
+                                min-width: 100px; /* Set a minimum width */
+                                max-width: 400px; /* Set a maximum width */
+                              }                                          
+                        </pre>
+                    </div>
+                    <li><span class="listpionter">Auto Width and height: </span></li>
+                    <div class="syntax">
+                        <pre>
+                            .example {
+                                width: auto; /* Let the browser determine the width based on content */
+                              }          
+                        </pre>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="csseditor">
+                <div class="writecode">
+                    <textarea  class="codearea" spellcheck="false" name="csseditor">
+<div class="box">
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</div>                        
+                    </textarea>
+                    <textarea  class="codearea" spellcheck="false" name="csseditor">
+.box{
+    width: 50%;
+    height: 100px;
+
+    background-color: #0d0d1450;
+}                        
+                    </textarea>
+                </div>
+                <div class="showcode">
+                    <iframe class="codeoutput" frameborder="0"></iframe>
+                </div>
+            </div>
+<p class="para">Understanding and manipulating the width and height properties are fundamental for creating layouts and controlling the visual appearance of elements on a webpage.</p>
+        </div>
+    </main>
+</body>
+<script src="../JS/cCSS.js"></script>
+</html>

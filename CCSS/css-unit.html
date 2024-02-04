@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/coursnav.css">
+    <link rel="stylesheet" href="../CSS/courscomponent.css">
+    <link rel="stylesheet" href="../CSS/responsivefornew.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pho/webb logo.png">
+            <span>webb orbit</span>
+        </div>
+        <div class="links">
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../CHTML/homehtml.html">html</a>
+                <a href="../CCSS/home-css.html">css</a>
+                <a href="#">javascript</a>
+                <a href="#">react js</a>
+                <button>dark</button>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div id="sidenav"></div>
+        <div id="maincon">
+            <h1 class="mainh1">Balancing Act: units in CSS</h1>
+            <p class="para m3">units are used to specify measurements and sizes for various properties. These units can be broadly categorized into two types: Absolute units and Relative units.</p>
+            <p class="para">As you navigate the vast landscape of web development, mastering CSS units becomes a crucial aspect of your skill set. It's not just about knowing the units; it's about leveraging them with finesse to create visually stunning and responsive designs. Let's dive into the world of CSS units with determination and enthusiasm.</p>
+
+            <!-- imgof list units -->
+
+            <h2 class="mainh2">Absolute Units</h2>
+            <p class="para">These units provide a consistent and predictable measurement regardless of the context in which they are used. Absolute units are often used in print stylesheets where physical dimensions, such as inches or centimeters, are more relevant.</p>
+            <div class="listbox">
+                <ul>
+                    <li><span class="listpointer">Pixels (px): </span>One pixel is a single dot on a screen. It's a fixed-size unit commonly used for digital screens. For example, <span class="highlight">width: 200px;</span></li>
+                    <li><span class="listpointer">Inches (in): </span>Represents inches. Often used in print stylesheets. For example, <span class="highlight">margin: 0.5in;</span></li>
+                    <li><span class="listpointer">Centimeters (cm): </span>Represents centimeters. Also used in print stylesheets. For example, <span class="highlight">font-size: 2cm;</span></li>
+                    <li><span class="listpointer">Millimeters (mm): </span>Represents millimeters. Common in print stylesheets. For example, <span class="highlight">border: 1mm solid black;</span></li>
+                    <li><span class="listpointer">Picas (pc): </span> Represents picas, a unit often used in typography. For example, <span class="highlight">height: 1.5pc;</span></li>
+                </ul>
+            </div>
+            <p class="para">It's important to note that while absolute units provide predictability in print stylesheets, they may not be the best choice for creating responsive and adaptable designs on the web, where relative units or viewport units are often more appropriate.</p>
+
+            <h2 class="mainh2">Relative Units</h2>
+            <p class="para">A relative unit in CSS is a type of length unit that is based on some characteristic of another element, typically the font size of an element or the dimensions of its parent container. Relative units provide a more flexible and adaptable approach to styling, as they scale in proportion to other factors, making them well-suited for responsive design.</p>
+
+            <div class="listbox">
+                <ul>
+                    <li><span class="listpointer">em: </span>Relative to the font-size of the element. If the font size of the parent element is 16 pixels, then 1em is equal to 16 pixels.</li>
+                    
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+<p>Lorem ipsum dolor sit </p>
+                            </textarea>
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+p {
+font-size: 16px;
+margin-left: 1em; /* Equivalent to 16px */
+}                                  
+</textarea>
+</div>
+<div class="showcode">
+    <iframe class="codeoutput" frameborder="0"></iframe>
+</div>
+</div>
+
+<li><span class="listpointer">rem (Root em): </span>Similar to <span class="highlight">em</span>, but relative to the <span class="highlight">font-size</span> of the root element (html). This makes rem a good choice for maintaining a consistent scale throughout the document.</li>
+<li><span class="listpointer">% (Percentage): </span>Represents a percentage of the parent element's size. For example, setting width: 50% means the element will be half the width of its parent.</li>
+<li><span class="listpointer">vw (Viewport Width) and vh (Viewport Height): </span><span class="highlight">vw</span> represents a percentage of the viewport width, while <span class="highlight">vh</span> represents a percentage of the viewport height.</li>
+
+<div class="csseditor">
+    <div class="writecode">
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+<div class="box"></div>            
+        </textarea>
+        <textarea  class="codearea" spellcheck="false" name="csseditor">
+.box{
+    width: 60vw;
+    height: 80vh; 
+
+    background-color: lightblue;
+}            
+        </textarea>
+    </div>
+    <div class="showcode">
+        <iframe class="codeoutput" frameborder="0"></iframe>
+    </div>
+</div>
+<p class="para">in this example, width =  60% of the viewport width, height = 80% of the viewport height </p>
+<li><span class="listpointer">vmin and vmax (Viewport Minimum and Maximum): </span><span class="highlight">vmin</span> is the smaller of <span class="highlight">vw</span> and <span class="highlight">vh</span>, while <span class="highlight">vmax</span> is the larger of <span class="highlight">vw</span> and <span class="highlight">vh</span>. These units are useful for creating components that scale appropriately based on the viewport size.</li>
+                </ul>
+            </div>
+            <p class="para">Using relative units is recommended for creating responsive and scalable designs, allowing elements to adapt to different screen sizes and user preferences.</p>
+
+            <h2 class="mainh2">Best Practices for Using CSS Units</h2>
+            <p class="para">When working with CSS units, it's essential to follow best practices to ensure a consistent and responsive design.</p>
+
+            <div class="listbox">
+                <ol>
+                    <li><span class="listpointer">Use Relative Units for Responsive Design: </span>Prefer relative units like em, rem, %, vw, vh, etc, especially for font sizes, margins, padding, and widths. Relative units adapt better to different screen sizes and make your layout more responsive.</li>
+                    <li><span class="listpointer">Avoid Absolute Units for Layout: </span>Avoid using absolute units (px, in, cm, mm, pt, pc) for layout dimensions, as they don't scale well across different devices.</li>
+                    <li><span class="listpointer">Combine Relative and Absolute Units When Needed: </span>Sometimes, a combination of relative and absolute units may be appropriate. For instance, using px for borders and em for padding within the same element.</li>
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+<div class="box"></div>                                
+                            </textarea>
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+.box {
+width: 60vw;
+height: 50vh;    
+
+padding: 1em;
+border: 2px solid #000;
+}                                  
+</textarea>
+</div>
+<div class="showcode">
+    <iframe class="codeoutput" frameborder="0"></iframe>
+</div>
+</div>
+<li><span class="listpointer">Use Viewport Units for Scaling: </span>Viewport units (vw, vh, vmin, vmax) are useful for creating components that scale based on the viewport size.</li>
+</ol>
+            </div>
+            <p class="para">Keep accessibility in mind by ensuring that text remains readable at different font sizes. Avoid setting font sizes in a way that prevents users from resizing text.</p>
+            <p class="para">Test your design across various devices and screen sizes to ensure that it looks good and is functional on different browsers.</p>
+            <div class="inpro">
+                <p class="para">As you dive into mastering CSS units, remember that confidence is the beacon guiding you through the coding challenges. Practice, experiment, and embrace the beauty of your code. Whether you're using pixels, percentages, or viewport units, let each line be a testament to your journey, and let confidence be the force propelling you forward.</p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../JS/cCSS.js"></script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class</title>
+    <link rel="stylesheet" href="../CSS/coursnav.css">
+    <link rel="stylesheet" href="../CSS/courscomponent.css">
+    <link rel="stylesheet" href="../CSS/responsivefornew.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pho/webb logo.png">
+            <span>webb orbit</span>
+        </div>
+        <div class="links">
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../CHTML/homehtml.html">html</a>
+                <a href="../CCSS/home-css.html">css</a>
+                <a href="#">javascript</a>
+                <a href="#">react js</a>
+                <button>dark</button>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div id="sidenav"></div>
+        <div id="maincon">
+            <h1 class="mainh1">CSS Pseudo-classes Explained</h1>
+            <p class="para m3top">In CSS, a pseudo-class is a keyword that is added to a selector to style a specific
+                state or condition of an element. Pseudo-classes are used to select and style elements based on their
+                state or position, such as when a link is being hovered over or when an input field is in focus.</p>
+            <p class="para">pseudo-classes in their ability to selectively style elements based on various conditions,
+                states, or positions. They enhance the flexibility and responsiveness of your styles by allowing you to
+                target specific scenarios without the need for additional HTML markup or JavaScript.</p>
+            <p class="para m3top">Here are some key aspects of the power of pseudo-classes:</p>
+            <div class="listbox">
+                <ul>
+                    <li> <span class="listpointer">Stateful Styling: </span>Pseudo-classes enable styling based on user
+                        interactions like hovering, clicking, or focusing.</li>
+                    <li> <span class="listpointer">Simplified Styling Logic: </span>Express conditions directly in CSS,
+                        reducing the need for complex JavaScript or extra HTML classes.</li>
+                    <li> <span class="listpointer">Dynamic Selection: </span>They provide a way to dynamically select
+                        and style elements without modifying the HTML structure. </li>
+                    <li> <span class="listpointer">Accessibility: </span>Proper use of pseudo-classes can improve the
+                        accessibility of your website by ensuring that interactive elements have clear focus styles and
+                        other visual cues.</li>
+                </ul>
+            </div>
+            <div class="syntax">
+                <pre>
+                    selector:pseudo-class {
+                        /* styles */
+                      }
+                </pre>
+            </div>
+            <p class="para">Append the pseudo-class to the selected element. Pseudo-classes are indicated by a colon (:)
+                followed by the name of the pseudo-class.</p>
+            <p class="para">Inside the curly braces {}, define the styles you want to apply to the selected element when
+                it matches the specified condition.
+            </p>
+
+            <h2 class="mainh2">Here are some common pseudo-classes</h2>
+            <p class="para bold">User Action Pseudo-classes</p>
+            <div class="listbox">
+                <ul>
+
+                    <li><span class="listpointer">:hover</span>: Selects and styles an element when the user hovers over
+                        it with the mouse.</li>
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea class="codearea" spellcheck="false" name="csseditor">
+<button>click me</button>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut consequatur accusantium quae quaerat deleniti doloremque corporis esse sint. Fuga, assumenda!</p>                           
+                            </textarea>
+                            <textarea class="codearea" spellcheck="false" name="csseditor">
+button{
+    border: none;
+    outline: none;
+    background-color: rgb(0, 255, 0);
+    padding: 0.4rem 0.6rem;
+}
+
+button:hover{
+    background-color: dodgerblue;
+}
+
+p:hover{
+    font-size: 1.1rem;
+    background-color: black;
+    color: white;
+}
+                            </textarea>
+                        </div>
+                        <div class="showcode">
+                            <iframe class="codeoutput" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <p class="para">You can use <span class="highlight">:hover</span> with various HTML elements like
+                        links, divs or any element that users might interact with. It's a useful tool for enhancing the
+                        user experience by providing visual cues for interactive elements.</p>
+
+                    <li><span class="listpointer">:focus</span>: The :focus pseudo-class is used to select and style an
+                        element when it gains keyboard focus. This typically happens when the user clicks on an
+                        interactive element like an input field or a link</li>
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea class="codearea" spellcheck="false" name="csseditor">
+<input type="text">
+        </textarea>
+                            <textarea class="codearea" spellcheck="false" name="csseditor">
+input:focus{
+    background-color: black;
+    color: white;
+}
+        </textarea>
+                        </div>
+                        <div class="showcode">
+                            <iframe class="codeoutput" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <li><span class="listpointer">:active</span>: The :active pseudo-class in CSS is used to select and
+                        style an element while it is being activated by the user. This activation typically occurs when
+                        the user clicks or taps on an element, such as a button. </li>
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea class="codearea" spellcheck="false" name="csseditor">
+<button>submit</button>            
+        </textarea>
+                            <textarea class="codearea" spellcheck="false" name="csseditor">
+button{
+border: none;
+outline: none;
+background-color: dodgerblue;
+padding: 0.4rem 0.6rem;
+}
+
+button:active {
+background-color: #FF6347;
+color: #FFFFFF;
+}            
+        </textarea>
+                        </div>
+                        <div class="showcode">
+                            <iframe class="codeoutput" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <p class="para">Keep in mind that the appearance of the <span class="highlight">:active</span> state
+                        may vary between browsers, and it's important to test and ensure that your styles provide a good
+                        user experience across different platforms.</p>
+                </ul>
+            </div>
+            <p class="para bold">Input pseudo-classes</p>
+            <p class="para">Input pseudo-classes in CSS allow you to style form elements based on their state or user
+                interactions. </p>
+            <p class="para">Here are some commonly used input pseudo-classes</p>
+            <div class="listbox">
+                <ul>
+                    <li><span class="listpointer">:checked</span>: Selects radio buttons or checkboxes that are checked.</li>
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+<input type="checkbox" name="check" id="1" />
+<label for="1">Check me!</label>                        
+                            </textarea>
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+input[type="checkbox"]:checked {
+box-shadow: 0 0 0 3px red;
+}
+                                                                
+                            </textarea>
+                        </div>
+                        <div class="showcode">
+                            <iframe class="codeoutput" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <p class="para">Keep in mind that the <span class="highlight">:checked</span> pseudo-class is specific to form elements that have a checked state, like checkboxes and radio buttons. It doesn't apply to other types of input elements or non-form elements.</p>
+
+                    <li><span class="listpointer">:disabled</span>: The <span class="highlight">:disabled</span> pseudo-class in CSS is used to select and style form elements that are disabled. Disabled form elements are those that the user cannot interact with or modify. Here's an example of how you can use the <span class="highlight">:disabled</span> pseudo-class:</li>
+                    <div class="csseditor">
+                        <div class="writecode">
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+<input type="text" placeholder="enter name" disabled>                                
+<input type="text" placeholder="enter email" >
+<button>submit</button>                             
+                            </textarea>
+                            <textarea  class="codearea" spellcheck="false" name="csseditor">
+input:disabled{
+opacity: 0.5;
+cursor: not-allowed; 
+background-color: burlywood; 
+}                           
+                            </textarea>
+                        </div>
+                        <div class="showcode">
+                            <iframe class="codeoutput" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <p class="para">In this example, the styles within <span class="highlight">:disabled</span> will be applied to disabled input elements. The opacity is reduced, the cursor is set to 'not-allowed,' and a background color is applied to visually indicate that the input is disabled.</p>
+                    <li> :placeholder and :required</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../JS/cCSS.js"></script>
+
+</html>

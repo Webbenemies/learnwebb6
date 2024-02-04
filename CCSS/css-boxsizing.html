@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/coursnav.css">
+    <link rel="stylesheet" href="../CSS/courscomponent.css">
+    <link rel="stylesheet" href="../CSS/responsivefornew.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pho/webb logo.png">
+            <span>webb orbit</span>
+        </div>
+        <div class="links">
+            <nav>
+                <a href="../index.html">home</a>
+                <a href="../CHTML/homehtml.html">html</a>
+                <a href="../CCSS/home-css.html">css</a>
+                <a href="#">javascript</a>
+                <a href="#">react js</a>
+                <button>dark</button>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div id="sidenav"></div>
+        <div id="maincon">
+            <h1 class="mainh1">Mastering Box Model: The Role of box-sizing in CSS Layouts</h1>
+            <p class="para m3top">The box-sizing property in CSS is used to control how the sizing of an element is calculated, specifically in relation to its width and height properties. It determines whether these properties include only the content, or also the padding and border of an element.</p>
+
+            <!-- imgof boxsizing -->
+
+            <p class="para bold">There are two main values for the <span class="highlight">box-sizing</span> property:</p>
+            <div class="listbox">
+                <ul>
+                    <li><span class="listpointer">content-box (default): </span>This is the default value. When you set <span class="highlight">box-sizing: content-box;</span>, the width and height properties only apply to the content of the element. The padding and border are added to the specified width and height, increasing the overall size of the element.</li>
+
+                    <!-- imgof contentbox -->
+
+                    <li><span class="listpointer">border-box: </span>When you set <span class="highlight">box-sizing: border-box;</span>, the width and height properties include the content, padding, and border of the element. The margin is still outside the specified width and height.</li>
+
+                    <!-- imgof borderbox -->
+
+                </ul>
+            </div>
+            <p class="para">For projects focusing on responsive design, some developers prefer <span class="highlight">box-sizing: border-box;</span> because it allows them to set a specific width for an element, including padding and border, without worrying about unexpected layout issues.</p>
+
+            <div class="csseditor">
+                <div class="writecode">
+                    <textarea  class="codearea" spellcheck="false" name="csseditor">
+<div class="box1">overall width: 244px</div>                        
+<div class="box2">overall width: 200px</div>                        
+                    </textarea>
+                    <textarea  class="codearea" spellcheck="false" name="csseditor">
+.box1 {
+box-sizing: content-box;
+width: 200px;
+padding: 20px;
+border: 2px solid black;
+}        
+
+.box2{
+box-sizing: border-box;
+width: 200px;
+padding: 20px;
+border: 2px solid black;
+}
+                    </textarea>
+                </div>
+                <div class="showcode">
+                    <iframe class="codeoutput" frameborder="0"></iframe>
+                </div>
+            </div>
+<p class="para bold">in this example</p>
+<div class="listbox">
+    <ol>
+        <li><span class="listpointer">box1 (content-box): </span>
+            width: 200px;  This applies to the content width only. The overall width of .box1 will be 244px (200px + 20px + 2px + 2px)
+        </li>
+        <li><span class="listpointer">box2 (border-box): </span>
+            width: 200px; This includes content, padding, and border.  The overall width of .box2 will be 200px padding and border are included
+        </li>
+    </ol>
+</div>
+
+<h2 class="mainh2">Consideration for Responsive Design</h2>
+<p class="para">For projects focusing on responsive design, some developers prefer <span class="highlight">box-sizing: border-box;</span> because it allows them to set a specific width for an element, including padding and border, without worrying about unexpected layout issues.</p>
+<p class="para">However, it's important to be consistent throughout your project. If you switch to <span class="highlight">border-box</span>, make sure you apply it consistently to all elements to avoid unexpected behavior.</p>
+        </div>
+    </main>
+</body>
+<script src="../JS/cCSS.js"></script>
+</html>
